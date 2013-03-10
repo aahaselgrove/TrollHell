@@ -1,0 +1,4 @@
+whitelist-commands:
+- ticket, balance, balancetop, bal, baltop, compass, help, helpop, list, who, mail, rules, spawn, ticket
+message-chance: 4
+trolls:

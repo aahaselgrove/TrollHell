@@ -1,0 +1,37 @@
+name: TrollHell
+main: me.dimpl.TrollHell.TrollHell
+authors: [Dimpl, t7seven7t]
+version: 1.1
+description: Burnin teh trolls since, well, only recently.
+commands:
+  hell:
+    description: Puts a player into Troll Hell.
+    usage: "Usage: /hell <player> or /troll <player>"
+    aliases: [troll, trollhell]
+    permission: trollhell.hell
+  trolls:
+    description: Lists online players in hell.
+    usage: "Usage: /trolls"
+    permission: trollhell.spy
+  helltalk:
+    description: Talk to the trolls.
+    usage: "Usage: /helltalk [message] or /trolltalk [message] (if no message, it is a toggle)"
+    aliases: [hellsay, trolltalk, trollsay]
+    permission: trollhell.talk
+permissions:
+  trollhell.*:
+    default: op
+  trollhell.mod:
+    description: Gives access to most TrollHell commands.
+    children:
+      trollhell.spy: true
+      trollhell.usecommands: true
+      trollhell.talk: true
+  trollhell.hell:
+    description: Allows you to place trolls in hell.
+  trollhell.spy:
+    description: Allows you to spy on trolls and their chat.
+  trollhell.usecommands:
+    description: Allows you to use commands while in hell.
+  trollhell.talk:
+    description: Allows you to talk to trolls.
